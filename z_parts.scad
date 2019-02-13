@@ -64,7 +64,7 @@ module display_z_assembly()
 
 module z_rod_holder()
 {
-  rod_holder_r = motor_w/2 + bushing_material_thick + corner_thick + rod_r;
+//  rod_holder_r = motor_w/2 + bushing_material_thick + corner_thick + rod_r;
 
   difference()
   {
@@ -138,10 +138,12 @@ module z_motor_mount()
 
 module z_end(motor=false)
 {
-  rod_holder_r = motor_w/2 + bushing_material_thick + corner_thick + rod_r;
+  // TODO: needs work on the scaling and making sure it fits   
+  //rod_holder_r = motor_w/2 + bushing_material_thick + corner_thick + rod_r;
+
   difference()
   {
-    union()
+    #union()
     {
       cube([z_rod_sep,tslot_w,corner_thick]);
       translate([0,-corner_thick,0])

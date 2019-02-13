@@ -44,6 +44,9 @@ calc_retainer_b_off = retainer_lip_thick - (bearing_w-belt_w)/2;
 
 // 20mm Tslot and associated bolt dimensions
 tslot_w = 20;
+// add second dimiention to use rectangular beams
+tslot_h = 10;
+
 tslot_bolt_d = 5;
 tslot_bolt_r = tslot_bolt_d/2;
 tslot_bolt_l = 4;
@@ -163,3 +166,13 @@ lm8uu_nut_r=10/2;
 
 arduino_width=60;
 
+// new vars
+
+// integrate the motor mount with the corner
+// print in a different orientation than originally intended
+// - some extra support for bridging
+// - rotating the $fn=6 "cylinder" for the y rod
+
+motor_mount_with_corner = true;
+
+include <own_vars.scad>
